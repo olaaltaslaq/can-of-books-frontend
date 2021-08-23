@@ -1,4 +1,5 @@
 import React from "react";
+
 import Header from "./Header";
 import Login from "./Login";
 import Footer from "./Footer";
@@ -9,11 +10,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 class App extends React.Component {
   render() {
-    console.log("app", this.props);
+    // console.log("app", this.props);
 
     const { isAuthenticated } = this.props.auth0;
 
-console.log(process.env.REACT_APP_SERVER);
+// console.log(process.env.REACT_APP_SERVER);
 
     return (
       <>
