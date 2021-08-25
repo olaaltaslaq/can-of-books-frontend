@@ -1,4 +1,5 @@
 import React from "react";
+
 import Header from "./Header";
 import Login from "./Login";
 import Footer from "./Footer";
@@ -8,6 +9,9 @@ import { withAuth0 } from "@auth0/auth0-react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 class App extends React.Component {
+
+  render() {
+
 
   constructor(props) {
     super(props);
@@ -54,11 +58,13 @@ class App extends React.Component {
 
     deletebook = async (bookID) => {
 
+
       let booksInfo = await axios.delete(`${process.env.REACT_APP_SERVER}/deletebook/${bookID}?bookName=${this.state.bookName}`)
       this.setState({
         books: booksInfo.data
       })
     }
+
 
     render(){
   
